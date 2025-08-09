@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 25413727cc0375343a89a8987eacb64c
+  productGUID: 711f47f5bb0997945ae2666a7af1613e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 3D_First_Project
+  productName: Vuniqe
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -838,14 +838,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 3D_First_Project
+  metroPackageName: Vuniqe
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: 3D_First_Project
+  metroApplicationDescription: Vuniqe
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -914,13 +914,13 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: fcc3ed67-3837-453e-b6e0-2ff21e5b862b
+  cloudProjectId: d5d6c27a-91da-44a1-a49e-49bf3a7263be
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 3D_First_Project
-  organizationId: stephensouth1307
+  projectName: Vuniqe
+  organizationId: gia_huy1106
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
