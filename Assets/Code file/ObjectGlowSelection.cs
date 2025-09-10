@@ -3,7 +3,6 @@ using UnityEngine.EventSystems;
 
 public class ObjectGlowSelection : MonoBehaviour
 {
-
     private Transform highlight;
     private Transform selection;
     private RaycastHit raycastHit;
