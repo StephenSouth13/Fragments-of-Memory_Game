@@ -41,7 +41,7 @@ public class ObjectButton : MonoBehaviour
         if (miniGameBanner != null && miniGameBanner.Banner.activeSelf)
         {
             miniGameBanner.Banner.SetActive(false);
-            Debug.Log("Banner đã đóng");
+            
         }
     }
 }
