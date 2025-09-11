@@ -1,85 +1,49 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System;
+using System.Net.Mime;
+using System.Collections.Generic;
+using UnityEditor.VersionControl;
 
-public class tooltipManager : MonoBehaviour
+public class TooltipManager : MonoBehaviour
 {
-    public static tooltipManager Instance;
+    public static TooltipManager _intance;
 
-    [Header("Tooltip UI")]
-    public GameObject tooltipPanel;
-    public TextMeshProUGUI tooltipText;
-    public RectTransform tooltipRect;
-
-    [Header("Settings")]
-    public float followSpeed = 5f;
-    public Vector2 offset = new Vector2(10, 10);
-
-    private Camera uiCamera;
-    private bool isVisible = false;
-
-    void Awake()
+    public TextMeshProUGUI content;
+    private void Awake()
     {
-        if (Instance == null)
+        if (_intance != null && _intance != this)
         {
-            Instance = this;
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject);
-        }
+            _intance = this;
+        }    
     }
 
-    void Start()
+    private void Start()
     {
-        uiCamera = Camera.main;
-        if (tooltipPanel != null)
-            tooltipPanel.SetActive(false);
+        Cursor.visible = true;
+        gameObject.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
-        if (isVisible)
-        {
-            UpdateTooltipPosition();
-        }
+        transform.position = Input.mousePosition;
     }
 
-    public void ShowTooltip(string text)
+    public void SetandShowToolTips(string message)
     {
-        if (tooltipPanel == null || tooltipText == null) return;
-
-        tooltipText.text = text;
-        tooltipPanel.SetActive(true);
-        isVisible = true;
-
-        // Resize tooltip to fit text
-        LayoutRebuilder.ForceRebuildLayoutImmediate(tooltipRect);
+        gameObject.SetActive(true);
+        content.text = message;
     }
 
-    public void HideTooltip()
+    public void HideToolTip()
     {
-        if (tooltipPanel != null)
-            tooltipPanel.SetActive(false);
-        isVisible = false;
-    }
+        gameObject.SetActive(false );
+        content.text = string.Empty;
+    }    
+}    
 
-    private void UpdateTooltipPosition()
-    {
-        Vector2 mousePos = Input.mousePosition;
-        Vector2 targetPos = mousePos + offset;
-
-        // Keep tooltip within screen bounds
-        Vector2 screenSize = new Vector2(Screen.width, Screen.height);
-        float tooltipWidth = tooltipRect.rect.width;
-        float tooltipHeight = tooltipRect.rect.height;
-
-        if (targetPos.x + tooltipWidth > screenSize.x)
-            targetPos.x = mousePos.x - tooltipWidth - offset.x;
-
-        if (targetPos.y + tooltipHeight > screenSize.y)
-            targetPos.y = mousePos.y - tooltipHeight - offset.y;
-
-        tooltipRect.position = Vector2.Lerp(tooltipRect.position, targetPos, followSpeed * Time.deltaTime);
-    }
-}

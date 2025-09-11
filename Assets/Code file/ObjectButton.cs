@@ -2,7 +2,13 @@
 
 public class ObjectButton : MonoBehaviour
 {
+    public static ObjectButton instance;
     public MiniGameBanner miniGameBanner;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -30,14 +36,7 @@ public class ObjectButton : MonoBehaviour
         Debug.Log("ObjectButton clicked!");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            CloseBanner();
-        }
-    }
-    private void CloseBanner()
+    public void CloseBanner()
     {
         if (miniGameBanner != null && miniGameBanner.Banner.activeSelf)
         {
