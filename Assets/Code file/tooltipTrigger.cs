@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -62,3 +63,5 @@ public class tooltipTrigger : MonoBehaviour
             Debug.LogError("TooltipTrigger: tooltipManager instance not found in 3D mode!");
     }
 }
+*/
+
