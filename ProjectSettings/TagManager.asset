@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OutLineGLowSelect
   - Selectable
+  - Panel
   layers:
   - Default
   - TransparentFX
