@@ -28,7 +28,7 @@ public class TooltipManager : MonoBehaviour
 
     private void Start()
     {
-        toolTip.pivot = new Vector2 (0,0);
+        //toolTip.pivot = new Vector2 (0,0);
         Cursor.visible = true;
         gameObject.SetActive(false);
     }
@@ -36,13 +36,12 @@ public class TooltipManager : MonoBehaviour
     private void Update()
     {
         transform.position = Input.mousePosition;
-        Vector2 mousePos = Input.mousePosition;
 
         // Nếu chuột ở bên phải màn hình → pivot sang phải
-        if (mousePos.x > Screen.width / 2)
+        if (transform.position.x > Screen.width / 2)
             tooltip.pivot = new Vector2(1, 1);
         else
-            tooltip.pivot = new Vector2(0, 1);
+            tooltip.pivot = new Vector2(0, 0);
 
         tooltip.position = mousePos;
     }
