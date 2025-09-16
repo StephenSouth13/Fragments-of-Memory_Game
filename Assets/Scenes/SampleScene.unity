@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cdd5e6f73209c47a152c809ba11aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toolTip: {fileID: 622672488}
   content: {fileID: 1345604487}
   panelsToCheck:
   - {fileID: 154977043}
@@ -4228,6 +4229,7 @@ GameObject:
   - component: {fileID: 2289893643618264468}
   - component: {fileID: 4548857958038046368}
   - component: {fileID: 4548857958038046369}
+  - component: {fileID: 4548857958038046370}
   m_Layer: 0
   m_Name: BookShelve
   m_TagString: Untagged
@@ -8648,6 +8650,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3140169, y: 4.6036816, z: 1.821321}
   m_Center: {x: 0.5362964, y: -0.0000004807182, z: -0.00000047879644}
+--- !u!65 &4548857958038046370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470280743766586922}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.016144, y: 4.6036816, z: 0.08383787}
+  m_Center: {x: 0.19516686, y: -0.00000047736046, z: -0.8687437}
 --- !u!1 &4563465013252429411
 GameObject:
   m_ObjectHideFlags: 0

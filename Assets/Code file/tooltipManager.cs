@@ -3,7 +3,7 @@ using TMPro;
 
 public class TooltipManager : MonoBehaviour
 {
-    public RectTransform toolTip:
+    public RectTransform toolTip;
     public static TooltipManager _intance;
     public TextMeshProUGUI content;
 
@@ -36,16 +36,15 @@ public class TooltipManager : MonoBehaviour
     private void Update()
     {
         transform.position = Input.mousePosition;
+        Vector2 mousePos = Input.mousePosition;
 
         // Nếu chuột ở bên phải màn hình → pivot sang phải
         if (transform.position.x > Screen.width / 2)
-            tooltip.pivot = new Vector2(1, 1);
+            toolTip.pivot = new Vector2(1, 1);
         else
-            tooltip.pivot = new Vector2(0, 0);
+            toolTip.pivot = new Vector2(0, 0);
 
-        tooltip.position = mousePos;
-    }
-}
+        toolTip.position = mousePos;
     }
 
     public void SetandShowToolTips(string message)
